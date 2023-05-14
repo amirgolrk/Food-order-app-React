@@ -1,0 +1,1 @@
+1-when we have a css module and in that module with dash named classes , we should use it like this : classList={classes['class-name']}
