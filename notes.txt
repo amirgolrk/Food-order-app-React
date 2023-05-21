@@ -1,1 +1,10 @@
 1-when we have a css module and in that module with dash named classes , we should use it like this : classList={classes['class-name']}
+//////////////////////////////////////////////////////////////////////////
+2-estefade a Modal : 
+kolan harja khastim az modal ha estefade konim bayad az portal ha estefade konim ta browser ma behine kar kone  ,marahel :
+aval dar jayy ke niaz darim bayad ye div dorost konim va yek id bedim behesh . ma dar inja ghabl az root dar index.html niaz dashtim . 
+sepas ye file js be name Modal.js dorost kardim va daar oon 3 ta component sakhtim : BackDrop , Overlay va khod Modal , va faghat az Modal export gereftim . har komdam az in ha bayad beheshoon style dade beshe ta dorost kar konan . 
+Backdrop pas zamine nime shafaf hast ke kon safhe ro migire va Overlay rooye oon miad va data ee ke ma mikhaim ro namayesh mide . baraye ham bayad barash az tag zoj estefade konim va props.children ro be kar bebarim . 
+hala dar componente Modal bayad do component ghabli ro add konim va az oon ha be soorat portal estefade konim . baraye hamin dar ebteda bayad ReactDOM ro az 'react-dom' import konim , sepas dar Modal dakhel fragment ha do component backDrop va overlay ro ejra konim . baraye hamin az ReacrDOM.createPortal estefade mikonim va tag component ro gharar midim va baray argument dovom ham bayad div mored hadaf ro gharar bedim ke dar inja hamooni bood ke ghabl root gozashte boodim . 
+dar akhar ham oon componenti ke mikhaim modal bashe ro ba component modal wrap mikonim . ke inja cart bood . 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
