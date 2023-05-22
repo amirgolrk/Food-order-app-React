@@ -8,3 +8,22 @@ Backdrop pas zamine nime shafaf hast ke kon safhe ro migire va Overlay rooye oon
 hala dar componente Modal bayad do component ghabli ro add konim va az oon ha be soorat portal estefade konim . baraye hamin dar ebteda bayad ReactDOM ro az 'react-dom' import konim , sepas dar Modal dakhel fragment ha do component backDrop va overlay ro ejra konim . baraye hamin az ReacrDOM.createPortal estefade mikonim va tag component ro gharar midim va baray argument dovom ham bayad div mored hadaf ro gharar bedim ke dar inja hamooni bood ke ghabl root gozashte boodim . 
 dar akhar ham oon componenti ke mikhaim modal bashe ro ba component modal wrap mikonim . ke inja cart bood . 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+we used context in our context Api in the header cart button because we wanted to sum the amount of ordered foods . we could use array.length but we couldnt get the proper outout because for example when we wanna order 3 sushies we will get 1 and thats wrong .
+a example for using reducers in an array :
+جمع کردن پراپرتی‌ (property)های عددی یک آرایه
+در واقع فانکشن ()reduce بیش‌ از آن‌ که کاربردی باشد،‌ گیج کننده است. اگر تمام کاری که می‌خواهید با آن بکنید، جمع کردن المنت‌های یک آرایه باشد، احتمالا بهتر است از حلقه‌ی for استفاده کنید. امام وقتی فانکشن ()reduce را با دیگر متدهایی مانند ()filter و ()map استفاده کنید، ()reduce نیز کاربر خود را نشان خواهد داد و جذاب‌تر خواهد بود.
+
+برای مثال تصور کنید که آرایه‌ای از اقلام یک فروشگاه را دارید و می‌خواهید مجموع پراپرتی property) total) همه‌ی این اقلام را حساب کنید.
+
+const lineItems = [
+  { description: 'Eggs (Dozen)', quantity: 1, price: 3, total: 3 },
+  { description: 'Cheese', quantity: 0.5, price: 5, total: 2.5 },
+  { description: 'Butter', quantity: 2, price: 6, total: 12 }
+];
+این یک روش برای جمع کردن totalهای این اقلام با استفاده از ()reduce است:
+
+lineItems.reduce((sum, li) => sum + li.total, 0); // 17.5
+این خط کد به خوبی کار می‌کند اما بهتر است از روش بهتر و سازنده‌تری استفاده کنیم. جایگزین بهتر این است که ابتدا با استفاده از ()map مقدار total را گرفته و سپس از آن در ()reduce استفاده کنیم:
+
+lineItems.map(li => li.total).reduce((sum, val) => sum + val, 0);
+//////////////////////////////////////////////////////////////////// 
